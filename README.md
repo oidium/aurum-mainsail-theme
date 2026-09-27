@@ -1,4 +1,4 @@
-# Aurum
+# Aurum — Mainsail Theme
 
 A warm, gold-accented dark theme for [Mainsail](https://github.com/mainsail-crew/mainsail), inspired by a desktop system monitor using the Aamis palette.
 
@@ -10,7 +10,7 @@ A warm, gold-accented dark theme for [Mainsail](https://github.com/mainsail-crew
 
 ## Install
 
-1. Download **Aurum-v1.0.0.zip** from [Releases](https://github.com/oidium/aurum/releases/latest) and extract it.
+1. Download **Aurum-Mainsail-Theme-v1.0.0.zip** from [Releases](https://github.com/oidium/aurum-mainsail-theme/releases/latest) and extract it.
 2. Open Mainsail and select the printer you want to theme.
 3. Under **Machine**, enable **Hidden files**. Create or open `.theme` in the printer's configuration directory.
 4. Back up existing theme files. Upload `custom.css`, `monitor-mono.ttf`, and `OFL.txt` from the archive's `.theme` directory directly into that directory on the printer.
