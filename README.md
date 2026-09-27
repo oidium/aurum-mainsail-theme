@@ -2,6 +2,10 @@
 
 A warm, gold-accented dark theme for [Mainsail](https://github.com/mainsail-crew/mainsail), inspired by a desktop system monitor using the Aamis palette.
 
+![Aurum Mainsail theme dashboard with gold controls, compact panels, and cream monospace text](screenshots/aurum-dashboard.png)
+
+*Shown with optional desktop window transparency. The wallpaper and transparency are not included in the theme; see [Transparency](#transparency).*
+
 - Near-black panels, cream text, and muted gold accents.
 - Bundled JetBrains Mono Nerd Font, loaded locally without a font service.
 - Thin gold borders, 4px corners, and spaced uppercase headings.
