@@ -1,0 +1,177 @@
+/* Aurum v1.0.0 — Mainsail (Vuetify 2) | MIT License
+ * Install in the selected printer's config/.theme/custom.css.
+ * v1.1: detect Vuetify dark mode even before the root class is initialized.
+ * Use Mainsail dark mode. No scripts, external services, or printer changes.
+ */
+@font-face {
+  font-family: "Monitor Mono";
+  src: local("JetBrainsMono Nerd Font"), local("JetBrains Mono"),
+       url("monitor-mono.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) {
+  --monitor-base: #0f0f0f;
+  --monitor-surface: #141311;
+  --monitor-ink: #eadccc;
+  --monitor-muted: #b1a697;
+  --monitor-accent: #e2be8a;
+  --monitor-line: rgba(226, 190, 138, .24);
+  --monitor-track: rgba(226, 190, 138, .15);
+  --monitor-font: "Monitor Mono", "JetBrainsMono Nerd Font", monospace;
+  --v-primary-base: #e2be8a !important;
+  --v-primary-lighten1: #eacea7 !important;
+  --v-primary-darken1: #cea37f !important;
+  --v-background-base: #0f0f0f !important;
+  --v-toolbar-base: #141311 !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) body,
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-application {
+  background-color: var(--monitor-base) !important;
+  color: var(--monitor-ink);
+  font-family: var(--monitor-font) !important;
+  --color-primary: #e2be8a !important;
+  --color-logo: #e2be8a !important;
+  --v-btn-text-primary: #0f0f0f !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-application :is(.title, .subtitle-1, .subtitle-2, .body-1, .body-2, .caption, .overline, .headline, .text-h4, .text-h5, .text-h6),
+html:is(.theme--dark, :has(.v-application.theme--dark)) :is(button, input, textarea, .consoleTableRow) {
+  font-family: var(--monitor-font) !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) :is(.v-card, .v-sheet.v-list, .v-data-table, .v-expansion-panel) {
+  background-color: var(--monitor-base);
+  color: var(--monitor-ink);
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-card.panel,
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-dialog > .v-card {
+  border: 1px solid var(--monitor-line);
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .panel-toolbar {
+  background-color: var(--monitor-base) !important;
+  border-bottom: 1px solid var(--monitor-line);
+  color: var(--monitor-accent) !important;
+  box-shadow: none !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .panel-toolbar .subheading {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .panel-toolbar .v-toolbar__title {
+  font-family: var(--monitor-font);
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-navigation-drawer,
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-app-bar {
+  background-color: var(--monitor-base) !important;
+  color: var(--monitor-ink);
+  box-shadow: none !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-navigation-drawer { border-right: 1px solid var(--monitor-line); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-app-bar { border-bottom: 1px solid var(--monitor-line); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) #nav-header { border-bottom-color: var(--monitor-line); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) #nav-header .v-toolbar__title {
+  color: var(--monitor-accent);
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) nav ul.navi .nav-link {
+  color: var(--monitor-ink);
+  border-radius: 4px;
+  font-size: 13px;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) nav ul.navi .nav-link:hover,
+html:is(.theme--dark, :has(.v-application.theme--dark)) nav ul.navi .nav-link.router-link-active {
+  background-color: var(--monitor-track);
+  color: var(--monitor-accent);
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-divider { border-color: var(--monitor-line); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-data-table > .v-data-table__wrapper > table > :is(tbody, thead) > tr > :is(td, th) {
+  border-bottom-color: var(--monitor-line);
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+  color: var(--monitor-muted);
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+  background-color: var(--monitor-track);
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-btn { border-radius: 4px; box-shadow: none !important; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-btn:not(.v-btn--disabled):not(.v-btn--text):not(.v-btn--outlined):not(.v-btn--icon):not(.primary):not(.error):not(.warning):not(.success):not(.info):not(.secondary) {
+  background-color: var(--monitor-surface);
+  color: var(--monitor-ink);
+  border: 1px solid var(--monitor-line);
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-application .primary {
+  background-color: var(--monitor-accent) !important;
+  border-color: var(--monitor-accent) !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-application .primary--text { color: var(--monitor-accent) !important; caret-color: var(--monitor-accent) !important; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-btn.primary:not(.v-btn--outlined):not(.v-btn--text) { color: var(--monitor-base) !important; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-text-field--outlined:not(.error--text) fieldset { border-color: var(--monitor-line); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-input:not(.error--text) .v-label { color: var(--monitor-muted); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-input input,
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-input textarea { color: var(--monitor-ink); font-variant-numeric: tabular-nums; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-tabs-bar { background-color: var(--monitor-base); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-tab { font-size: 12px; letter-spacing: 1px; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-progress-circular__underlay { stroke: var(--monitor-track); }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-progress-circular__info { font-family: var(--monitor-font); font-variant-numeric: tabular-nums; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-progress-linear { border-radius: 2px; }
+html:is(.theme--dark, :has(.v-application.theme--dark)) :is(button, a, input, textarea):focus-visible {
+  outline: 2px solid var(--monitor-accent) !important;
+  outline-offset: 2px;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) ::selection { background: var(--monitor-accent); color: var(--monitor-base); }
+@media (max-width: 600px) {
+  html:is(.theme--dark, :has(.v-application.theme--dark)) .panel-toolbar .subheading { letter-spacing: 1px; }
+}
+
+/* v1.2: compact outer dashboard gutters; retain padding inside controls. */
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container:has(> div > .row > :is(.col, [class*="col-"]) > .panel) {
+  padding: 3px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container > div > .row:has(> :is(.col, [class*="col-"]) > .panel) {
+  margin: 0 -1.5px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container > div > .row:has(> :is(.col, [class*="col-"]) > .panel) > :is(.col, [class*="col-"]) {
+  padding: 0 1.5px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container > div > .row > :is(.col, [class*="col-"]) > .panel {
+  margin-bottom: 3px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-application :is(.v-list-item__title, .v-list-item__subtitle, .v-toolbar__title, .v-btn__content, .v-tab, .text-body-1, .text-body-2, .text-subtitle-1, .text-subtitle-2, .text-caption),
+html:is(.theme--dark, :has(.v-application.theme--dark)) nav ul.navi .nav-link {
+  font-family: var(--monitor-font) !important;
+}
+
+/* The Status component wraps its panel in an extra div. */
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container .panel.status-panel {
+  margin-bottom: 3px !important;
+}
+
+/* File browser uses a direct grid; the viewer uses a direct panel wrapper. */
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container:has(.gcode-files-panel, .gcode-viewer-panel) {
+  padding: 3px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container > .row:has(.gcode-files-panel) {
+  margin: 0 -1.5px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container > .row:has(.gcode-files-panel) > :is(.col, [class*="col-"]) {
+  padding: 0 1.5px !important;
+}
+html:is(.theme--dark, :has(.v-application.theme--dark)) #page-container > .row:has(.gcode-files-panel) .panel {
+  margin-bottom: 3px !important;
+}
+
+/* Warm gold for unhomed/toolhead actions; other warnings retain their colors.
+   Outlined gold distinguishes warning/unhomed from solid gold homed state. */
+html:is(.theme--dark, :has(.v-application.theme--dark)) .v-application .toolhead-control-panel .v-btn.warning:not(.v-btn--disabled) {
+  background-color: rgba(226, 190, 138, .15) !important;
+  border: 1px solid var(--monitor-accent) !important;
+  color: var(--monitor-accent) !important;
+}
