@@ -1,6 +1,6 @@
 # Aurum — Mainsail Theme
 
-A warm, gold-accented dark theme for [Mainsail](https://github.com/mainsail-crew/mainsail), inspired by a desktop system monitor using the Aamis palette.
+A warm, gold-accented dark theme for [Mainsail](https://github.com/mainsail-crew/mainsail).
 
 ![Aurum Mainsail theme dashboard with gold controls, compact panels, and cream monospace text](screenshots/aurum-dashboard.png)
 
